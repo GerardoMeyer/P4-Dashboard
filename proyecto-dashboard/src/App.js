@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import Footer from './pages/Footer'
 import NotFound from './pages/NotFound'
 import GenerarOrden from './pages/GenerarOrden'
+import Usuarios from './pages/Usuarios'
 
 export default function app() {
 
@@ -20,6 +21,7 @@ export default function app() {
                 <Route  path="/" element={<Home />} />
                 <Route path="*" element={<NotFound />} />
                 <Route path="/generarOrden" element={<GenerarOrden />} />
+                <Route path="/usuarios" element={<Usuarios />} />
             </Routes>
 
             {/* Footer de la página aquí */}

@@ -16,22 +16,22 @@ export default function GenerarOrden() {
                         </div>
                         <form>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Tamaño del café</label>
-                            <input style={{width: '50%'}} type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
+                            <label for="exampleInputEmail1" class="form-label"><strong>Tamaño del café</strong></label>
+                            <input style={{width: '50%', border: '1px solid grey'}} type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required></input>
                             <div id="emailHelp" class="form-text">(Chico, Mediano, Grande)</div>
                         </div>
                         <br></br>
                         <br></br>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">No. de raciones de azúcar</label>
-                            <input style={{width: '50%'}} type="password" class="form-control" id="exampleInputPassword1"></input>
+                            <label for="exampleInputPassword1" class="form-label"><strong>No. de raciones de azúcar</strong></label>
+                            <input style={{width: '50%', border: '1px solid grey'}} type="password" class="form-control" id="exampleInputPassword1" required></input>
                             <div id="emailHelp" class="form-text">(Número entero)</div>
                         </div>
                         <br></br>
                         <br></br>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Tipo de leche</label>
-                            <input style={{width: '50%'}} type="password" class="form-control" id="exampleInputPassword1"></input>
+                            <label for="exampleInputPassword1" class="form-label"><strong>Tipo de leche</strong></label>  
+                            <input style={{width: '50%', border: '1px solid grey'}} type="password" class="form-control" id="exampleInputPassword1" required></input>
                             <div id="emailHelp" class="form-text">(Entera, Deslactosada, Light)</div>
                         </div>
                         <button type="submit" class="btn btn-primary btnGenerar mt-3">Generar orden</button>

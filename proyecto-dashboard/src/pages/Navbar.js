@@ -26,6 +26,9 @@ export default function Navbar() {
                     <li class="nav-item">
                     <a class="nav-link" href="/generarOrden">Generar pedido</a>
                     </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/usuarios">Usuarios generados</a>
+                    </li>
                 </ul>
                 </div>
             </div>
