@@ -1,0 +1,40 @@
+.imgHome {
+    border-radius: 15%;
+    border: 5px solid black;
+    width: 100%;
+}
+
+.ctnUno {
+    padding: 5% 5%;
+
+}
+
+.ctnDos {
+    padding: 5% 5%;
+}
+
+.abs-center {
+    margin: 0 0;
+
+}
+
+.card {
+    border: 5px solid black;
+}
+
+.card-img-top {
+    max-width: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.titulo-negritas {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+}
+
+.titulo {
+    margin: 2% 0;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 4rem;
+}

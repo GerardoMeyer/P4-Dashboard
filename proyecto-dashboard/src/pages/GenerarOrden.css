@@ -1,0 +1,11 @@
+
+.titulo {
+    margin: 2% 0;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+}
+
+.image-cafe {
+    border: 5px solid black;
+    width: 100%;
+}
