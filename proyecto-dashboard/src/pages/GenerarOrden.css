@@ -9,3 +9,26 @@
     border: 5px solid black;
     width: 100%;
 }
+
+.input-leche-nueva {
+    border: 2px solid black;
+    width: 100%;
+}
+
+.contenedor-cambios {
+    padding: 2% 10%;
+}
+
+td:hover {
+    background-color: #cecece;
+}
+
+th {
+    border: 1px solid #D5D9D9;
+    background-color: #c3bef0;
+    padding: 2%;
+}
+
+tr {
+    padding: 1;
+}
