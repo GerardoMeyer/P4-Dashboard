@@ -9,7 +9,7 @@ import {
   doc,
   deleteDoc
 } from 'firebase/firestore'
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import {db} from './Firebase'
 
 export default function GenerarOrden() {
@@ -86,6 +86,7 @@ export default function GenerarOrden() {
     getData()
   }
 
+  // Últimos cambios
   return (
     <React.Fragment>
       <div class="container">
