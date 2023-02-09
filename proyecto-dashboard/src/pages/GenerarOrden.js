@@ -62,7 +62,6 @@ export default function GenerarOrden() {
     await addDoc(collection(db, 'orden'), pedido)
     getData()
     setOrder('')
-    getData()
   }
 
   const [cambioLeche,
@@ -83,6 +82,15 @@ export default function GenerarOrden() {
   // Borrar registro
   const deleteOrder = async(id, coleccion) => {
     await deleteDoc(doc(db, coleccion, id))
+    getData()
+  }
+
+  function Milk(props) {
+    return <p>Tipo de leche actual: <i><strong>{props.tipo}</strong></i></p>;
+  }
+
+  function finalOrder() {
+    createOrder()
     getData()
   }
 
@@ -146,14 +154,18 @@ export default function GenerarOrden() {
                 <div class="form-text">(Entera, Deslactosada, Light)</div>
               </div>
               <button
-                onClick={createOrder}
-                type="submit"
-                class="btn btn-outline-dark btnGenerar mt-3">Generar orden</button>
+                onClick={finalOrder}
+                type="button"
+                class="btn btn-outline-dark btnGenerar mt-3"
+                value='Existe'>Generar orden</button>
               <br></br>
               <br></br>
               <button class="btn btn-outline-dark" onClick={getData} type="button">
                 Visualizar registros
               </button>
+              <br></br>
+              <br></br>
+              <Milk tipo= {registroLeche}/>
 
             </form>
           </div>
