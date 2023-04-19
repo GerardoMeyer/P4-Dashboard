@@ -5,12 +5,12 @@ import { getFirestore } from 'firebase/firestore'
 import { GoogleAuthProvider } from 'firebase/auth'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDLY7MDtfqwTrgaW1ZG_e-NBzUupF6Qlf0",
-  authDomain: "proyecto-dashboard-40fc6.firebaseapp.com",
-  projectId: "proyecto-dashboard-40fc6",
-  storageBucket: "proyecto-dashboard-40fc6.appspot.com",
-  messagingSenderId: "1080489890497",
-  appId: "1:1080489890497:web:636315f528814a7ad0fa40"
+  apiKey: "AIzaSyC-vTO3pMp_UKKPARIAdNAFRPcgeIUE4-E",
+  authDomain: "proyecto-dashboard-nuevo.firebaseapp.com",
+  projectId: "proyecto-dashboard-nuevo",
+  storageBucket: "proyecto-dashboard-nuevo.appspot.com",
+  messagingSenderId: "719688665272",
+  appId: "1:719688665272:web:42aa57f8befc17efb4cc4d"
 };
 
 // Initialize Firebase

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
 import './GenerarOrden.css'
 import {
@@ -13,6 +13,16 @@ import {useState} from 'react';
 import {db} from './Firebase'
 
 export default function GenerarOrden() {
+  // Vaciar Forms
+  const [validated, setValidated] = useState(false);
+  const formRef = useRef(null);
+
+  // Poder resetear el formulario
+  const handleReset = () => {
+      formRef.current.reset();
+      setValidated(false);
+  };
+
   // Variables
   const [info,
     setInfo] = useState([])
@@ -62,6 +72,7 @@ export default function GenerarOrden() {
     await addDoc(collection(db, 'orden'), pedido)
     getData()
     setOrder('')
+    handleReset()
   }
 
   const [cambioLeche,
@@ -77,6 +88,7 @@ export default function GenerarOrden() {
   const updateOrder = async(id, coleccion, milk) => {
     await updateDoc(doc(db, coleccion, id), {milk})
     getData()
+    handleReset()
   }
 
   // Borrar registro
@@ -92,6 +104,7 @@ export default function GenerarOrden() {
   function finalOrder() {
     createOrder()
     getData()
+    handleReset()
   }
 
   // Últimos cambios
@@ -106,7 +119,7 @@ export default function GenerarOrden() {
                 ¡Aquí puedes generar tú orden!
               </p>
             </div>
-            <form>
+            <form ref={formRef}  validated={validated}>
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">
                   <strong>Tamaño del café</strong>
@@ -156,11 +169,11 @@ export default function GenerarOrden() {
               <button
                 onClick={finalOrder}
                 type="button"
-                class="btn btn-outline-dark btnGenerar mt-3"
+                class="btn btn-primary btnGenerar mt-3"
                 value='Existe'>Generar orden</button>
               <br></br>
               <br></br>
-              <button class="btn btn-outline-dark" onClick={getData} type="button">
+              <button class="btn btn-success" onClick={getData} type="button">
                 Visualizar registros
               </button>
               <br></br>
